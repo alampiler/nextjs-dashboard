@@ -1,14 +1,12 @@
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { db } = require('@vercel/postgres');
-const {
+import { db } from '@vercel/postgres';
+import {
   invoices,
   customers,
   revenue,
-  users,// eslint-disable-next-line @typescript-eslint/no-var-requires
-} = require('../app/lib/placeholder-data.js');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const bcrypt = require('bcrypt');
+  users,
+} from '../app/lib/placeholder-data.js';
+import bcrypt from 'bcrypt';
 
 async function seedUsers(client) {
   try {
