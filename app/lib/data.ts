@@ -131,10 +131,7 @@ export async function fetchFilteredInvoices(
 
 export async function fetchInvoicesPages(query: string) {
   noStore();
-  const helloYou    = (name : any)=> {
-    name = 'you' || name   ;
-    console.log("hello" + name + "!" )
-  }
+ 
   try {
     const count = await sql`SELECT COUNT(*)
     FROM invoices
